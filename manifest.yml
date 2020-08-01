@@ -1,0 +1,15 @@
+---
+applications:
+- instances: 1
+  timeout: 180
+  name: froggnoderedapp
+  buildpack: sdk-for-nodejs
+  command: npm start
+  disk_quota: 1G
+  memory: 128MB
+  domain: mybluemix.net
+  host: frogg-node-red-app
+  services:
+    - frogg-node-red-app-cloudant-1596074162225-96619
+  env:
+    OPTIMIZE_MEMORY: true
